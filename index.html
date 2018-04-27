@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css "href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:900" rel="stylesheet">
+
+
+</head>
+<body>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Wild West HangMan</h1>
+        </div>
+      </div>
+<hr>
+        <div class="container">
+            <div class="row">
+              <div class="col">
+                <img src="https://www.mindgames.com/uploaded/thumb/wildwesthangman300.jpg" class="img-fluid" alt="Responsive image">
+              </div>
+              <div class="col">
+                <h3>Press any key to get started!</h3>
+                <h3>Wins:<span id="winner"></span></h3>
+                <h3>Losses: <span id"losser"></span></h3>
+
+                <p id="textBox"></p>
+
+
+                <h3>Number of guesses remaining: <span id="guessMe"></span></h3>
+
+                <h3>Letters already Guessed: <p id="alreadyChose"></p></h3>
+
+              </div>
+            </div>
+  
+<script type="text/javascript">
+
+  var winner = 0;
+  var textBox = ["c","o","w","b","o","y"]
+  var guessMe = 10;
+  var alreadyChose = [];
+ 
+    // changing chosen word into dashes
+  for(var i = 0; i < textBox.length; i++){
+    textBox[i] = "_ ";
+  }
+  // making displayanswer variable join text box so i get dashes
+  var displayAnswer = textBox.join(""); 
+
+  function updateTextBox(){ 
+    document.getElementById("textBox").innerHTML= displayAnswer;
+  }
+  updateTextBox();
+// ___________________________________ 
+ document.onkeyup = function(event) {
+  var userInput = event.key.toLowerCase(); 
+  if ( guessMe === 0 ) {
+    losses
+  }
+
+
+
+
+  userInput.innerHTML= alreadyChose;
+
+  }
+
+
+
+// console loggin answers 
+console.log("User Chose " + alreadyChose)
+
+</script>
+
+</body>
+</html> 

@@ -1,0 +1,36 @@
+body{
+    background-color: black;
+}
+.display-4{
+    font-family: 'Orbitron', sans-serif;
+    color:#0d6001;
+    text-shadow: 0px 0 black, 0 0px #e81212, 0px 0 black, 0 3px #e81212;
+    text-align: center;
+}
+.jumbotron{
+    background-color: black;  
+    height: 100px;  
+}
+hr{
+    height: 3px;
+    background-color: red;
+}
+.row{
+    height: 5px;
+    color: orange;  
+    height: 500px;
+}
+img{
+    border-style: dashed;   
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#textBox{
+width: 150px;
+background-color: black;
+color: orange;
+}
+#winner{
+    color: orange;
+}
