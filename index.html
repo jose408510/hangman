@@ -26,15 +26,15 @@
               </div>
               <div class="col">
                 <h3>Press any key to get started!</h3>
-                <h3>Wins:<span id="winner"></span></h3>
-                <h3>Losses: <span id"losser"></span></h3>
+                <h3>Wins:<span id="wins"></span></h3>
+                <h3>Losses: <span id="loss"></span></h3>
 
                 <p id="textBox"></p>
 
 
                 <h3>Number of guesses remaining: <span id="guessMe"></span></h3>
 
-                <h3>Letters already Guessed: <p id="alreadyChose"></p></h3>
+                <h3>Letters already Guessed: <p id="already"></p></h3>
 
               </div>
             </div>
@@ -42,9 +42,10 @@
 <script type="text/javascript">
 
   var winner = 0;
+  var losser = 0;
   var textBox = ["c","o","w","b","o","y"]
-  var guessMe = 10;
-  var alreadyChose = [];
+  var guess = 10;
+  var alreadyChose = [""];
  
     // changing chosen word into dashes
   for(var i = 0; i < textBox.length; i++){
@@ -60,21 +61,38 @@
 // ___________________________________ 
  document.onkeyup = function(event) {
   var userInput = event.key.toLowerCase(); 
-  if ( guessMe === 0 ) {
-    losses
+  if ( userInput === textBox[0] ) {
+    winner++
+  } else {
+    guess--
+  }
+  if (guess === 0 )
+  {
+  losser++
+  guess = 10 
   }
 
 
 
-
-  userInput.innerHTML= alreadyChose;
-
-  }
+  
 
 
 
 // console loggin answers 
-console.log("User Chose " + alreadyChose)
+console.log("Letters already Guessed " + userInput )
+
+
+already.textContent = userInput;
+guessMe.textContent = guess;
+loss.textContent = losser;
+wins.textContent = winner;
+displayAnswer.textContent = textBox;
+
+
+}
+
+
+
 
 </script>
 
