@@ -6,6 +6,8 @@ User inputs a guess letter If it is in the current word/phrase then the letter w
 
 The goal of this project was to use our currently learned skills in integrating html, css and javascript(logic) together into the design and presentation of a game.
 
+ https://jose408510.github.io/hangman/
+
 <h1>Technologies Used</h1> 
 
 <tr>
